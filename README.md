@@ -1,8 +1,14 @@
 # opentrons_levseq_utils
 Repo containing helpful code for processing screening data from opentrons robots along with the sequencing of each well using levseq barcoding
 
+## Process the output from the opentrons screening run
+Run the notebook `240517_opentrons_stats.ipynb`
+
 ## Running LevSeq
-I installed levseq in a conda environment on kestrel. I had to make a couple minor changes to the code to get it to run.
+After the nanopore sequencing data comes back, we need to run levseq to demultiplex the plates and wells
+
+I installed levseq in a conda environment on kestrel. I had to make a couple minor changes to the code to get it to run (https://github.com/jlaw9/LevSeq).
+See https://github.com/fhalab/LevSeq/issues/21, https://github.com/fhalab/LevSeq/issues/19
 
 Running levseq:
 - You'll need two files:
@@ -24,4 +30,4 @@ levseq 250507_run_output/ ./250507_run 250507_run/2025-04-16_GsAdh_ref_levSeq.cs
 If everything goes well, you'll have a variants.csv file in the output folder with the DNA mutations in from each plate and well
 
 ## Mapping to AA mutations and combining with screening data
-Run the notebook `250425_map_variants.ipynb`
+Run the notebook `250425_map_levseq_variants.ipynb`
