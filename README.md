@@ -73,6 +73,7 @@ scp <ref.csv> <reads.fastq> kestrel.hpc.nrel.gov:/projects/bpms/<user>/levseq/<d
 ssh to kestrel (use a DAV node e.g., kd[1-6] so you can run levseq without submitting a job)
 ```
 ssh kd2.hpc.nrel.gov
+module load conda
 ```
 
 Run levseq on kestrel:
