@@ -83,7 +83,7 @@ conda activate /projects/bpms/jlaw/envs/levseq
 levseq 250507_run_output/ ./250507_run 250507_run/2025-04-16_GsAdh_ref_levSeq.csv
 ```
 
-If everything goes well, you'll have a variants.csv file in the output folder with the DNA mutations in from each plate and well
+If everything goes well, you'll have a variants.csv file in the output folder with the DNA mutations in each plate and well
 
 
 ## Map the variants to amino acid mutations
