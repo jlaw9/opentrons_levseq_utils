@@ -15,11 +15,19 @@ mkdir $USER
 cd $USER
 
 # create your own conda environment
+# you can either install it in /projects/bpms (slower startup) or in your home folder
+# option 1: install in /projects/bpms/$USER/envs
 mkdir envs
 # optional: download the packages to /scratch (the home folder has 50GB space per user)
 # export CONDA_PKGS_DIRS=/scratch/$USER/conda_pkgs
 mamba create --yes --prefix ./envs/levseq python=3.12
 conda activate ./envs/levseq
+
+# option 2: install in you home folder (faster startup)
+mamba create --yes --name levseq python=3.12
+conda activate levseq
+
+# install prerequisites
 mamba install --yes -c bioconda -c conda-forge samtools minimap2
 mamba install --yes -c conda-forge jupyterlab
 
@@ -85,3 +93,5 @@ git clone https://github.com/jlaw9/opentrons_levseq_utils.git
 # run this python script to load the levseq outputs and map to AA mutations
 python opentrons_levseq_utils/map_variants.py --var_file runs/250416_run/outputs/variants.csv
 ```
+
+Now copy the files back to you computer
