@@ -42,6 +42,8 @@ cd levseq
 
 ### Now you can test your installation
 ``` bash
+# For some reason, some of the drivers don't get mapped correctly. Run this command:
+echo "export LD_LIBRARY_PATH=\"\$LD_LIBRARY_PATH:~/.conda-envs/levseq/lib\"" >> ~/.bashrc && source ~/.bash_profile
 # check that the installation works
 levseq --help
 # try running an example
