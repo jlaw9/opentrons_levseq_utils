@@ -77,8 +77,8 @@ ssh kd2.hpc.nrel.gov
 
 Run levseq on kestrel:
 ```
-cd /projects/bpms/jlaw/projects/other/levseq
-conda activate /projects/bpms/jlaw/envs/levseq
+cd /projects/bpms/$USER/levseq
+conda activate levseq  # or /projects/bpms/$USER/envs/levseq
 
 levseq 250507_run_output/ ./250507_run 250507_run/2025-04-16_GsAdh_ref_levSeq.csv
 ```
