@@ -65,8 +65,8 @@ After the nanopore sequencing data comes back, we need to run levseq to demultip
 
 Running levseq:
 - You'll need two files:
-  1. The reference csv (containing the references sequence)
-  2. The sequencing reads fastq file
+  1. The reference csv (e.g., [levseq-ref.cvs](https://github.com/fhalab/LevSeq/blob/main/example/levseq-ref.csv))
+  3. The sequencing reads fastq file
 
 Copy the files to kestrel. There are other programs you can use for this. I use `scp` on the terminal like this:
 ```
