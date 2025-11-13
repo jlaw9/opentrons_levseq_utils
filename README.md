@@ -50,6 +50,7 @@ echo "export LD_LIBRARY_PATH=\"\$LD_LIBRARY_PATH:/home/$USER/.conda-envs/levseq/
 levseq --help
 # try running an example
 mkdir runs
+cd runs
 cp -r /projects/bpms/jlaw/projects/other/levseq_example/runs/250416_run ./
 cd 250416_run
 # run levseq: 
