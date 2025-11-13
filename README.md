@@ -38,13 +38,14 @@ pip install levseq
 # make a levseq folder to hold your inputs and outputs
 mkdir levseq
 cd levseq
+
+# For some reason, some of the drivers don't get mapped correctly.
+# Run this command to update the LD_LIBRARY_PATH variable, and add it to your bash profile (so it's automatically loaded when you login to kestrel):
+echo "export LD_LIBRARY_PATH=\"\$LD_LIBRARY_PATH:/home/$USER/.conda-envs/levseq/lib\"" >> ~/.bashrc && source ~/.bashrc
 ```
 
 ### Now you can test your installation
 ``` bash
-# For some reason, some of the drivers don't get mapped correctly.
-# Run this command to update the LD_LIBRARY_PATH variable, and add it to your bash profile (so it's automatically loaded when you login to kestrel):
-echo "export LD_LIBRARY_PATH=\"\$LD_LIBRARY_PATH:/home/$USER/.conda-envs/levseq/lib\"" >> ~/.bashrc && source ~/.bashrc
 # check that the installation works
 levseq --help
 # try running an example
